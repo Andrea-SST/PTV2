@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "a3e63828-5995-44ce-a503-3b5cd716262c",
+		"name": "ExamenTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17626779",
+		"_collection_link": "https://planetary-flare-226290.postman.co/workspace/CN11~c7363653-07ec-45d3-9687-9b1237dfb61a/collection/17626779-a3e63828-5995-44ce-a503-3b5cd716262c?action=share&source=collection_link&creator=17626779"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/examen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Examen 1\",\n    \"preguntas\": [\n        {\n            \"pregunta\": \"Pregunta 1\",\n            \"puntaje\": 20,\n            \"respuestaA\": {\n                \"respuesta\": \"Opcion 1\",\n                \"correcta\": true\n            },\n            \"respuestaB\": {\n                \"respuesta\": \"Opcion 2\",\n                \"correcta\": false\n            },\n            \"respuestaC\": {\n                \"respuesta\": \"Opcion 3\",\n                \"correcta\": false\n            },\n            \"respuestaD\": {\n                \"respuesta\": \"Opcion 4\",\n                \"correcta\": false\n            }\n        },\n        {\n            \"pregunta\": \"Pregunta 2\",\n            \"puntaje\": 80,\n            \"respuestaA\": {\n                \"respuesta\": \"Opcion 1\",\n                \"correcta\": false\n            },\n            \"respuestaB\": {\n                \"respuesta\": \"Opcion 2\",\n                \"correcta\": true\n            },\n            \"respuestaC\": {\n                \"respuesta\": \"Opcion 3\",\n                \"correcta\": false\n            },\n            \"respuestaD\": {\n                \"respuesta\": \"Opcion 4\",\n                \"correcta\": false\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/examen",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"examen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/alumnos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Alejandro\",\n    \"ciudad\": \"Toluca\",\n    \"edad\": 23,\n    \"timezone\": \"America/Mexico_City\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/alumnos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alumnos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/examen/asignar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id_examen\": 5,\n    \"fecha\": \"25-06-2024 11:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/examen/asignar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"examen",
+						"asignar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/enviarexamen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_alumno\": \"Alejandro Gonzalez\",\r\n    \"respuesta\": \"4B\"\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/enviarexamen",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"enviarexamen"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
